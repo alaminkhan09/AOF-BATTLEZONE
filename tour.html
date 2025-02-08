@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Free Fire Tournament 2025</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <!-- FontAwesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" 
+        integrity="sha512-papNM1NJ/nuDb8O6CFkqQKILiHyzVYssGOT1gG0kHkYkF5N15sEQs9q3bDnwzkjQ0fPzZkj5UydNScY3rjRL0w==" 
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- Google Fonts: Orbitron for headings, Roboto for body -->
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  <!-- Animate.css for animations -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+  <style>
+    /* CSS Variables for theme colors */
+    :root {
+      --bg-color: #ffffff;          /* White background */
+      --light-bg: #f8f8f8;           /* Light grey for sections */
+      --accent: #9b59b6;             /* Purple accent */
+      --text-color: #000000;         /* Black text */
+    }
+    /* Global Styles */
+    body {
+      font-family: 'Roboto', sans-serif;
+      background-color: var(--bg-color);
+      color: var(--text-color);
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+    }
+    h1, h2, h3, h4, .navbar-brand {
+      font-family: 'Orbitron', sans-serif;
+    }
+    a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+    a:hover {
+      color: #a569bd;
+    }
+    /* Navbar */
+    .navbar {
+      background-color: var(--bg-color) !important;
+      padding: 1rem 0;
+    }
+    /* Hero Section */
+    .hero {
+      background: url('banner-image.jpg') no-repeat center center/cover;
+      height: 60vh;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 0 15px;
+    }
+    .hero-overlay {
+      background-color: rgba(0, 0, 0, 0.7);
+      padding: 30px;
+      border-radius: 10px;
+      color: #ffffff;
+    }
+    /* Sections */
+    section {
+      padding: 60px 0;
+    }
+    .bg-light {
+      background-color: var(--light-bg) !important;
+    }
+    /* Buttons */
+    .btn-primary {
+      background-color: var(--accent);
+      border-color: var(--accent);
+    }
+    .btn-primary:hover {
+      background-color: #a569bd;
+      border-color: #a569bd;
+    }
+    /* Messenger Icon - Fixed at bottom right */
+    .messenger-icon {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      z-index: 10000;
+      background: #0078ff;
+      padding: 10px;
+      border-radius: 50%;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    }
+    .messenger-icon a {
+      color: #fff;
+      font-size: 1.5rem;
+    }
+    .messenger-icon a:hover {
+      color: #e1e1e1;
+    }
+    /* Footer */
+    footer {
+      background-color: var(--bg-color);
+      padding: 1rem 0;
+    }
+    /* Custom Form Styles */
+    .form-label {
+      font-weight: 500;
+    }
+  </style>
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-light sticky-top animate__animated animate__fadeInDown">
+    <div class="container">
+      <a class="navbar-brand" href="#">Free Fire Tournament</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" 
+              aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link active" href="#home">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#registration">Registration</a></li>
+          <li class="nav-item"><a class="nav-link" href="#updates">Live Updates</a></li>
+          <li class="nav-item"><a class="nav-link" href="#gallery">Gallery</a></li>
+          <li class="nav-item"><a class="nav-link" href="#rules">Rules</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section id="home" class="hero animate__animated animate__zoomIn">
+    <div class="hero-overlay">
+      <h1 class="display-4">Free Fire Tournament 2025</h1>
+      <p class="lead">Join the ultimate battle and prove your skills!</p>
+      <a href="#registration" class="btn btn-primary btn-lg">Register Now</a>
+    </div>
+  </section>
+
+  <!-- Tournament Details & Countdown Section -->
+  <section class="bg-light animate__animated animate__fadeInUp">
+    <div class="container">
+      <h2 class="text-center mb-4">Tournament Details</h2>
+      <!-- Countdown Timer -->
+      <div class="text-center my-4">
+        <h3>Countdown to Tournament Start</h3>
+        <div id="countdown" class="display-5"></div>
+      </div>
+      <div class="row text-center">
+        <div class="col-md-6 mb-3">
+          <h4>Date & Time</h4>
+          <p>March 15, 2025 | 10:00 AM - 6:00 PM</p>
+        </div>
+        <div class="col-md-6 mb-3">
+          <h4>Venue</h4>
+          <p>Online / Gaming Arena (if applicable)</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Registration Section -->
+  <section id="registration" class="animate__animated animate__fadeInUp">
+    <div class="container">
+      <h2 class="text-center mb-4">Registration</h2>
+      <form id="registrationForm">
+        <div class="mb-3">
+          <label for="teamName" class="form-label">Team Name</label>
+          <input type="text" class="form-control" id="teamName" placeholder="Enter your team name" required>
+        </div>
+        <div class="mb-3">
+          <label for="player1" class="form-label">Player 1 Name</label>
+          <input type="text" class="form-control" id="player1" placeholder="Enter player 1 name" required>
+        </div>
+        <div class="mb-3">
+          <label for="player2" class="form-label">Player 2 Name</label>
+          <input type="text" class="form-control" id="player2" placeholder="Enter player 2 name" required>
+        </div>
+        <div class="mb-3">
+          <label for="player3" class="form-label">Player 3 Name</label>
+          <input type="text" class="form-control" id="player3" placeholder="Enter player 3 name" required>
+        </div>
+        <div class="mb-3">
+          <label for="player4" class="form-label">Player 4 Name</label>
+          <input type="text" class="form-control" id="player4" placeholder="Enter player 4 name" required>
+        </div>
+        <div class="mb-3">
+          <label for="backupPlayer" class="form-label">Backup Player Name</label>
+          <input type="text" class="form-control" id="backupPlayer" placeholder="Enter backup player name" required>
+        </div>
+        <div class="mb-3">
+          <label for="entryFee" class="form-label">Entry Fee (tk)</label>
+          <!-- This field is auto-set (example: 500 tk) -->
+          <input type="text" class="form-control" id="entryFee" value="500" readonly>
+        </div>
+        <div class="mb-3">
+          <p class="mb-1"><strong>Bkash:</strong> 01741341352</p>
+          <p><strong>Nagad:</strong> 01745845019</p>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit Registration</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Live Updates Section -->
+  <section id="updates" class="bg-light animate__animated animate__fadeInUp">
+    <div class="container">
+      <h2 class="text-center mb-4">Live Updates</h2>
+      <p class="text-center">Real-time match updates will be displayed here.</p>
+      <div class="table-responsive">
+        <table class="table table-bordered text-center">
+          <thead>
+            <tr>
+              <th>Match</th>
+              <th>Team A</th>
+              <th>Team B</th>
+              <th>Score</th>
+            </tr>
+          </thead>
+          <tbody id="liveScores">
+            <tr>
+              <td>Match 1</td>
+              <td>Team Alpha</td>
+              <td>Team Beta</td>
+              <td>1 - 0</td>
+            </tr>
+            <!-- More rows can be added dynamically -->
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- Gallery Section -->
+  <section id="gallery" class="animate__animated animate__fadeInUp">
+    <div class="container">
+      <h2 class="text-center mb-4">Gallery</h2>
+      <div class="row">
+        <!-- Replace image paths with your actual images -->
+        <div class="col-md-4 mb-3">
+          <img src="image1.jpg" class="img-fluid rounded" alt="Gallery Image 1">
+        </div>
+        <div class="col-md-4 mb-3">
+          <img src="image2.jpg" class="img-fluid rounded" alt="Gallery Image 2">
+        </div>
+        <div class="col-md-4 mb-3">
+          <img src="image3.jpg" class="img-fluid rounded" alt="Gallery Image 3">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Rules Section (in English) -->
+  <section id="rules" class="bg-light animate__animated animate__fadeInUp">
+    <div class="container">
+      <h2 class="text-center mb-4">Tournament Rules & Warnings</h2>
+      <div class="mb-3">
+        <p>🚫 No driving allowed.</p>
+        <p>🚫 Cheating, hacking, and any illegal activities are strictly prohibited.</p>
+        <p>📌 Players must respect each other and follow all the rules.</p>
+        <p>📌 For any complaints, please contact the organizers.</p>
+      </div>
+      <div class="mb-3">
+        <p>⚠️ Caution:</p>
+        <p>✅ Please read all the rules carefully before participating in the tournament.</p>
+        <p>❌ Failure to comply with the rules may result in disqualification.</p>
+      </div>
+      <div class="text-center">
+        <p>🎮 ALL THE BEST! LET THE BATTLE BEGIN! 🎮</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="bg-light animate__animated animate__fadeInUp">
+    <div class="container">
+      <h2 class="text-center mb-4">Contact Us</h2>
+      <form id="contactForm">
+        <div class="mb-3">
+          <label for="contactName" class="form-label">Your Name</label>
+          <input type="text" class="form-control" id="contactName" placeholder="Enter your name" required>
+        </div>
+        <div class="mb-3">
+          <label for="contactEmail2" class="form-label">Email Address</label>
+          <input type="email" class="form-control" id="contactEmail2" placeholder="Enter your email" required>
+        </div>
+        <div class="mb-3">
+          <label for="message" class="form-label">Your Message</label>
+          <textarea class="form-control" id="message" rows="4" placeholder="Enter your message" required></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Send Message</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="text-center animate__animated animate__fadeInUp">
+    <div class="container">
+      <p>&copy; 2025 Free Fire Tournament. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Messenger Icon Fixed (Absolute) - Always visible on the website -->
+  <div class="messenger-icon">
+    <a href="https://m.me/YOUR_MESSENGER_GROUP" target="_blank" rel="noopener noreferrer" title="Join our Messenger Group">
+      <i class="fab fa-facebook-messenger"></i>
+    </a>
+  </div>
+
+  <!-- Bootstrap JS Bundle with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  
+  <!-- Custom JavaScript for Form Handling and Countdown Timer -->
+  <script>
+    // Registration form submission handler
+    document.getElementById("registrationForm").addEventListener("submit", function(e) {
+      e.preventDefault();
+      alert("Registration submitted successfully!");
+      this.reset();
+    });
+    // Contact form submission handler
+    document.getElementById("contactForm").addEventListener("submit", function(e) {
+      e.preventDefault();
+      alert("Thank you for contacting us!");
+      this.reset();
+    });
+    // Countdown Timer
+    var countDownDate = new Date("Mar 15, 2025 10:00:00").getTime();
+    var countdownFunction = setInterval(function() {
+      var now = new Date().getTime();
+      var distance = countDownDate - now;
+      var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+      document.getElementById("countdown").innerHTML =
+        days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
+      if (distance < 0) {
+        clearInterval(countdownFunction);
+        document.getElementById("countdown").innerHTML = "Tournament Started!";
+      }
+    }, 1000);
+  </script>
+</body>
+</html>

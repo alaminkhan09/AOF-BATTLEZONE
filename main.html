@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Free Fire Tournament 2025</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- Google Fonts: Orbitron for headings, Roboto for body -->
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  <!-- Animate.css for animations -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+  <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-light sticky-top animate__animated animate__fadeInDown">
+    <div class="container">
+      <a class="navbar-brand" href="#">AOF BattleZone</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" 
+              aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link active" href="#home">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#prizes">Winning Prizes</a></li>
+          <li class="nav-item"><a class="nav-link" href="#registration">Registration</a></li>
+          <li class="nav-item"><a class="nav-link" href="#updates">Live Updates</a></li>
+          <li class="nav-item"><a class="nav-link" href="#gallery">Gallery</a></li>
+          <li class="nav-item"><a class="nav-link" href="#rules">Rules</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section id="home" class="hero animate__animated animate__zoomIn">
+    <!-- Hero image: পরিবর্তন করে নিচের ফাইল পাথ ব্যবহার করা হয়েছে -->
+    <img src="/image/banner2 (2).png" alt="Hero Image" class="hero-img">
+    <div class="hero-overlay">
+      <h1 class="display-4">Free Fire Tournament 2025</h1>
+      <p class="lead">Join the ultimate battle and prove your skills!</p>
+      <a href="#registration" class="btn btn-primary btn-lg">Register Now</a>
+    </div>
+  </section>
+
+  <!-- Winning Prizes Section (placed immediately after Hero) -->
+  <section id="prizes" class="animate__animated animate__fadeInUp">
+    <div class="container">
+      <h2 class="text-center mb-4">Winning Prizes</h2>
+      <div id="prizesContent">
+        <h4 class="text-center">First Prize: 500TK</h4>
+        <h4 class="text-center">Second Prize: To be announced</h4>
+        <h4 class="text-center">Third Prize: To be announced</h4>
+      </div>
+    </div>
+  </section>
+
+  <!-- Tournament Details & Countdown Section -->
+  <section class="bg-light animate__animated animate__fadeInUp">
+    <div class="container">
+      <h2 class="text-center mb-4">Tournament Details</h2>
+      <!-- Countdown Timer -->
+      <div class="text-center my-4">
+        <h3>Countdown to Tournament Start</h3>
+        <div id="countdown" class="display-5"></div>
+      </div>
+      <div class="row text-center">
+        <div class="col-md-6 mb-3">
+          <h4>Date & Time</h4>
+          <p>February 11, 2025 | 10:00 AM - 6:00 PM</p>
+        </div>
+        <div class="col-md-6 mb-3">
+          <h4>Tournament Format</h4>
+          <p>Team Battle Royale - Double Elimination</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Registration Section -->
+  <section id="registration" class="animate__animated animate__fadeInUp">
+    <div class="container">
+      <h2 class="text-center mb-4">Registration</h2>
+      <form id="registrationForm">
+        <div class="mb-3">
+          <label for="teamName" class="form-label">Team Name</label>
+          <input type="text" class="form-control" id="teamName" placeholder="Enter your team name" required>
+        </div>
+        <div class="mb-3">
+          <label for="player1" class="form-label">Player 1 Name</label>
+          <input type="text" class="form-control" id="player1" placeholder="Enter player 1 name" required>
+        </div>
+        <div class="mb-3">
+          <label for="player2" class="form-label">Player 2 Name</label>
+          <input type="text" class="form-control" id="player2" placeholder="Enter player 2 name" required>
+        </div>
+        <div class="mb-3">
+          <label for="player3" class="form-label">Player 3 Name</label>
+          <input type="text" class="form-control" id="player3" placeholder="Enter player 3 name" required>
+        </div>
+        <div class="mb-3">
+          <label for="player4" class="form-label">Player 4 Name</label>
+          <input type="text" class="form-control" id="player4" placeholder="Enter player 4 name" required>
+        </div>
+        <div class="mb-3">
+          <label for="backupPlayer" class="form-label">Backup Player Name</label>
+          <input type="text" class="form-control" id="backupPlayer" placeholder="Enter backup player name" required>
+        </div>
+        <div class="mb-3">
+          <label for="entryFee" class="form-label">Entry Fee (tk)</label>
+          <!-- This field is auto-set (example: 500 tk) -->
+          <input type="text" class="form-control" id="entryFee" value="500" readonly>
+        </div>
+        <div class="mb-3">
+          <p class="mb-1"><strong>Bkash:</strong> 01741341352</p>
+          <p><strong>Nagad:</strong> 01745845019</p>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit Registration</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Live Updates Section -->
+  <section id="updates" class="bg-light animate__animated animate__fadeInUp">
+    <div class="container">
+      <h2 class="text-center mb-4">Live Updates</h2>
+      <p class="text-center">Real-time match updates will be displayed here.</p>
+      <div class="table-responsive">
+        <table class="table table-bordered text-center">
+          <thead>
+            <tr>
+              <th>Match</th>
+              <th>Team A</th>
+              <th>Team B</th>
+              <th>Score</th>
+            </tr>
+          </thead>
+          <tbody id="liveScores">
+            <tr>
+              <td>Match 1</td>
+              <td>Team Alpha</td>
+              <td>Team Beta</td>
+              <td>1 - 0</td>
+            </tr>
+            <!-- More rows can be added dynamically -->
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- Gallery Section -->
+  <section id="gallery" class="animate__animated animate__fadeInUp">
+    <div class="container">
+      <h2 class="text-center mb-4">Gallery</h2>
+      <div class="row">
+        <!-- Replace image paths with your actual images -->
+        <div class="col-md-4 mb-3">
+          <img src="image1.jpg" class="img-fluid rounded" alt="Gallery Image 1">
+        </div>
+        <div class="col-md-4 mb-3">
+          <img src="image2.jpg" class="img-fluid rounded" alt="Gallery Image 2">
+        </div>
+        <div class="col-md-4 mb-3">
+          <img src="image3.jpg" class="img-fluid rounded" alt="Gallery Image 3">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Rules Section (in English) -->
+  <section id="rules" class="bg-light animate__animated animate__fadeInUp">
+    <div class="container">
+      <h2 class="text-center mb-4">Tournament Rules & Warnings</h2>
+      <div class="mb-3">
+        <p>🚫 No driving allowed.</p>
+        <p>🚫 Cheating, hacking, and any illegal activities are strictly prohibited.</p>
+        <p>📌 Players must respect each other and follow all the rules.</p>
+        <p>📌 For any complaints, please contact the organizers.</p>
+      </div>
+      <div class="mb-3">
+        <p>⚠️ Caution:</p>
+        <p>✅ Please read all the rules carefully before participating in the tournament.</p>
+        <p>❌ Failure to comply with the rules may result in disqualification.</p>
+      </div>
+      <div class="text-center">
+        <p>🎮 ALL THE BEST! LET THE BATTLE BEGIN! 🎮</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="bg-light animate__animated animate__fadeInUp">
+    <div class="container">
+      <h2 class="text-center mb-4">Contact Us</h2>
+      <form id="contactForm">
+        <div class="mb-3">
+          <label for="contactName" class="form-label">Your Name</label>
+          <input type="text" class="form-control" id="contactName" placeholder="Enter your name" required>
+        </div>
+        <div class="mb-3">
+          <label for="contactEmail2" class="form-label">Email Address</label>
+          <input type="email" class="form-control" id="contactEmail2" placeholder="Enter your email" required>
+        </div>
+        <div class="mb-3">
+          <label for="message" class="form-label">Your Message</label>
+          <textarea class="form-control" id="message" rows="4" placeholder="Enter your message" required></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Send Message</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="text-center animate__animated animate__fadeInUp">
+    <div class="container">
+      <p>&copy;AOF BattleZone 2025. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Messenger Icon Fixed (Always visible on the website) -->
+  <div class="messenger-icon">
+    <a href="https://m.me/YOUR_MESSENGER_GROUP" target="_blank" rel="noopener noreferrer" title="Join our Messenger Group">
+      <i class="fab fa-facebook-messenger"></i>
+    </a>
+  </div>
+
+
+  <!-- Bootstrap JS Bundle with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  
+    <script src="tour.js"></script>
+  
+</body>
+</html>
